@@ -1,0 +1,29 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Consumo de Api Restfull",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KleberMeira/NodeJs.git"
+  },
+  "author": "Kleber Meira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KleberMeira/NodeJs/issues"
+  },
+  "homepage": "https://github.com/KleberMeira/NodeJs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.8.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
