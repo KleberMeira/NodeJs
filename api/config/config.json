@@ -1,10 +1,12 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_development",
+    "password": "tecladinho2012Kel@",
+    "database": "escola_ingles",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": true
+
   },
   "test": {
     "username": "root",
@@ -15,7 +17,7 @@
   },
   "production": {
     "username": "root",
-    "password": null,
+    "password": "tecladinho2012Kel@",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
