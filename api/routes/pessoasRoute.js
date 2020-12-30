@@ -12,6 +12,7 @@ router.post('pessoas/:estudanteId/matricula/', PessoaController.criaMatricula)
 router.put('/pessoas/:id', PessoaController.atualizaPessoa)
 router.put('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.atualizaMatricula)
 router.delete('/pessoas/:id', PessoaController.apagaPessoa)
+router.delete('/pessoas/:id', PessoaController.apagaMatricula)
 
 
 module.exports = router
