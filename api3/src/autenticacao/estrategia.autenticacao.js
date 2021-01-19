@@ -1,18 +1,15 @@
-const BearerStrategy = require('passport-http-bearer').Strategy;
-const jwt = require('jsonwebtoken')
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy
+const Usuario = require('./ ')
+
 
 passport.use(
-    new BearerStrategy(
-       async (token, done) => {
+ new LocalStrategy({
 
-        try{
-            const payload = jwt.verify(token, process.env.CHAVE_JWT);
-            const usuario = await Usuario.buscaPorId(payload.id);
-            done(null, usuario);
-        }catch(erro){
-            done(error);
-        }
-            
-        }
-    )
+    usernameField: 'nome',
+    passwordField: 'senha',
+    session: false
+ }, (nome, senha, done) => {
+
+ })   
 )
