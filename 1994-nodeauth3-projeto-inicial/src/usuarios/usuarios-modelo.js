@@ -10,11 +10,12 @@ class Usuario {
     this.email = usuario.email
     this.senhaHash = usuario.senhaHash
     this.emailVerificado = usuario.emailVerificado
+    this.cargo = usuario.cargo
     this.valida()
   }
 
   async adiciona () {
-    if (await Usuario.buscaPorEmail(this.email)) {
+    if (await usuariosDao.buscaPorEmail(this.email)) {
       throw new InvalidArgumentError('O usuário já existe!')
     }
 
@@ -34,6 +35,11 @@ class Usuario {
   valida () {
     validacoes.campoStringNaoNulo(this.nome, 'nome')
     validacoes.campoStringNaoNulo(this.email, 'email')
+    const cargoValidos = ['admin','editor','assinante']
+
+    if(cargoValidos.indexOf(this.cargo) === -1 ){
+      throw new InvalidArgumentError('O campo cargo está inválido')
+    }
   }
 
   async verificaEmail () {
